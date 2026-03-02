@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crssorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <title>Coffee Shop</title>
+
+    <style>
+        body {
+            font-family: "Ubuntu", sans-serif;
+            background: #121212;
+            color: var(--text-dark);
+            line-height: 1.7;
+            padding-top: 80px;
+        }
+
+        .logo-icon {
+            color: var(--coffee-gold);
+            font-size: 28px;
+
+        }  
+        .reviews-section {
+            padding: 80px 60px;
+            background: #111;
+            text-align: center;
+            color: white;
+        }
+
+        .section-title {
+            font-size: 32px;
+            margin-bottom: 50px;
+        }
+
+        .reviews-container {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .review-card {
+            background: #1c1c1c;
+            padding: 25px;
+            width: 300px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+            transition: transform 0.3s ease;
+        }
+
+        .review-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .stars {
+            color: gold;
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+
+        .review-card p {
+            font-style: italic;
+            margin-bottom: 15px;
+        }
+
+        .review-card h4 {
+            color: #ccc;
+        }
+        
+        .contact-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 50px;
+            padding: 100px 80px;
+            color: white;
+            padding-bottom: 70px;
+            background: linear-gradient(to bottom, #0d0d0d, #1a1a1a);
+        }
+        .contact-form{
+            background: #fff;
+            padding: 20px;
+            max-width: 400px;
+            margin: auto;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 60px;
+            margin-top: 60px;
+            margin-left: auto;
+            margin-right: 50px;
+
+        }
+
+        .contact-form h2{
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .cafe-image img {
+           width: 400px;
+           border-radius: 15px;
+           box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+        }
+
+        .form-control{
+            margin-bottom: 15px;
+        }
+
+        .form-control label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-control input, .form-control textarea {
+            width:100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form-control textarea {
+            resize: vertical;
+        }
+
+        .form-control button{
+            background-color: #28a745;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            width: 100%;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .form-control button:hover {
+            background-color: #218838;
+        }
+
+        @media (max-width: 768px) {
+          .contact-section {
+             flex-direction: column;
+          }
+        }
+    </style>
+</head>
+<body>
+        <div class="contact-section">
+            <div class="cafe-info">
+              <h2>Welcome to KigaliCafe</h2>
+              <p>
+                At KigaliCafe, we serve freshly brewed coffee made from the
+                finest Rwandan beans. Our cozy atmosphere is perfect for
+                relaxing, studying, or meeting friends.
+              </p>
+
+              <h3>Opening Hours</h3>
+              <p>Monday - Friday: 7:00 AM - 9:00 PM</p>
+              <p>Saturday - Sunday: 8:00 AM - 10:00 PM</p>
+
+              <h3>Location</h3>
+              <p>Kigali, Rwanda</p>
+        </div>
+        <div class="cafe-image">
+            <img src="images/5.png" alt="Kigali Cafe">
+        </div>
+
+        </div>
+    
+    <header>
+        <div class="container header-container">
+            <a href="#" class="logo">
+
+                <i class="fa-solid fa-mug-hot logo-icon"></i>
+                <div class="logo-text">Kigali<span>Cafe</span></div>
+
+                
+            </a>
+
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+
+            <div class = "nav-buttons">
+                <a href="#" class="btn btn-secondary">Sign In</a>
+                <a href="#" class="btn btn-primary">Order Online</a>
+
+            </div>
+        </div>
+    </header>
+        <section class="reviews-section">
+            <h2 class="section-title">What Our Customers Say</h2>
+
+            <div class="reviews-container">
+
+                <div class="review-card">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p>
+                        "The best coffee in Kigali! The atmosphere is cozy and the service is amazing."
+                    </p>
+                    <h4>- Sarah M.</h4>
+                </div>
+
+                <div class="review-card">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <p>
+                        "I love studying here. Fresh beans and fast WiFi. Highly recommended!"
+                    </p>
+                    <h4>- Eric K.</h4>
+                </div>
+
+                <div class="review-card">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <p>
+                        "Great customer service and delicious pastries. I’ll definitely come back."
+                    </p>
+                    <h4>- Aline R.</h4>
+                </div>
+
+            </div>
+        </section>
+
+        <div class="contact-form">
+
+            <h2>Contact Us</h2>
+
+            <form action="#" method="post">
+
+                <div class="form-control">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter Name" required>
+                </div>
+
+                <div class="form-control">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Enter Your Email" required>
+                </div>
+
+                <div class="form-control">
+                    <label for="message">Message</label>
+
+                    <textarea name="message" id="message" rows="5" placeholder="Enter Your Description"></textarea>
+                </div>
+
+                <div class="form-control">
+                    <button type ="submit">Send</button>
+                </div>
+            </form>
+        </div>
+
+        <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>About KigalCafe</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Coffee Blends</a></li>
+                        <li><a href="#">Some Guides</a></li>
+                        <li><a href="#">Sustainability</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <ul class="footer-links">
+                        <li><i class="fa-solid fa-location-dot"></i>Kacyiru,Kigali</li>
+                        <li><i class="fa-solid fa-phone"></i>0789908692</li>
+                        <li><i class="fa-solid fa-envelope">allanhirwa1@gmail.com</i></li>
+                        <li><i class="fa-solid fa-clock"></i>Monday-Sunday:8am-8pm</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="copyright">
+                &copy; 2026 KigaliCafe. All rights reserved.
+            </div>
+        </div>
+    </footer>
+        
+</body>
+</html>
